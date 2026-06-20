@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Pomeroy">
+  <!-- subtle tomato: rounded red body with a small green leaf + stem, geometric -->
+  <defs>
+    <radialGradient id="body" cx="38%" cy="34%" r="72%">
+      <stop offset="0%" stop-color="#E5383B"/>
+      <stop offset="60%" stop-color="#D62828"/>
+      <stop offset="100%" stop-color="#9D0208"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="39" r="21" fill="url(#body)"/>
+  <ellipse cx="24" cy="31" rx="5.5" ry="7" fill="#ffffff" opacity="0.18"/>
+  <!-- stem -->
+  <rect x="30.5" y="13" width="3" height="7" rx="1.5" fill="#5A8F69"/>
+  <!-- five-point leaf -->
+  <path d="M32 14
+           L37 18 L43 17 L40 22 L45 26 L39 26 L36 31 L32 26
+           L28 31 L25 26 L19 26 L24 22 L21 17 L27 18 Z"
+        fill="#5A8F69"/>
+  <circle cx="32" cy="22" r="2.4" fill="#4a7a58"/>
+</svg>

@@ -1,0 +1,30 @@
+[package]
+name = "pomeroy"
+version = "0.1.0"
+description = "Pomeroy — a cross-platform Pomodoro timer with project/task logging"
+authors = ["Pomeroy"]
+edition = "2021"
+
+# The library target is what the Tauri binary links against, and also lets us
+# unit-test the storage logic without spinning up a window.
+[lib]
+name = "pomeroy_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-dialog = "2"
+tauri-plugin-notification = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", features = ["serde"] }
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true
